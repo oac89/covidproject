@@ -35,5 +35,21 @@ Alert.destroy_all
             }])
     end 
 
+grocery_store = Location.create(name: "Tony's", address: "4894 W. Milwaukee Ave")
+bank = Location.create(name: "Bank of America", address: "7894 W. Damen Ave")
+coffee = Location.create(name: "Ipsento", address: "4613 N. California")
+
+
+
+mon = Weekday.create(user_id: user.id, location_id: location.id, day: "Monday")
+tue = Weekday.create(user_id: user.id, location_id: location.id, day: "Tuesday")
+wed = Weekday.create(user_id: user.id, location_id: location.id, day: "Wednesday")
+thurs = Weekday.create(user_id: user.id, location_id: location.id, day: "Thursday")
+fri = Weekday.create(user_id: user.id, location_id: location.id, day: "Friday")
+sat = Weekday.create(user_id: user.id, location_id: location.id, day: "Saturday")
+sun = Weekday.create(user_id: user.id, location_id: location.id, day: "Sunday")
+
+
+
 
 
