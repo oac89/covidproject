@@ -1,1 +1,15 @@
-let's see this work please. i want to go to sleep. 
+<h1> New User Form </h1>
+    <%= form_for(@user) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :age %>
+    <%= f.text_field :age%>
+    <br>
+    <%= f.collection_select :location_ids, Location.all, :id, :name %>
+    <%= f.collection_select :status, User.all.status, :id, :status %>
+    #(status for drop down option)
+    <br>
+    <%= f.submit%>
+    <% end %>
+    
