@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_04_180606) do
+ActiveRecord::Schema.define(version: 2020_12_05_052755) do
 
   create_table "alerts", force: :cascade do |t|
-    t.string "type"
+    t.string "alert_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
