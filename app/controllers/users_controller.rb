@@ -21,9 +21,13 @@ class UsersController < ApplicationController
         end 
     end 
 
+    def update
+
+    end 
+
     private 
 
     def user_params
-        params.require(:post).permit(:name, :age, :status) 
+        params.require(:post).permit(:name, :age, :status, :location_ids) 
     end 
 end
