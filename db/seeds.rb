@@ -51,10 +51,10 @@ mall = Location.create(name: "Brickyard Mall", address: "2530 N. Narragansett")
 # sun = Weekday.create(user_id: user.id, location_id: location.id, day: "Sunday")
 
 
-alert1 = Alert.create(type: "Possible exposure at a location you visited, quarantine and test ASAP!")
-alert2 = Alert.create(type: "Negative for Covid-19 at this time. Please keep practicing social distancing and covering your face including the nose!")
-alert3 = Alert.create(type: "You have indicated positive for Covid-19. Please adhere to recommended CDC guidelines and check with your physician.")
-alert4 = Alert.create(type: "Vaccinated.")
-alert5 = Alert.create(type: "Please indicate your status.")
+alert1 = Alert.create(alert_type: "Possible exposure at a location you visited, quarantine and test ASAP!")
+alert2 = Alert.create(alert_type: "Negative for Covid-19 at this time. Please keep practicing social distancing and covering your face including the nose!")
+alert3 = Alert.create(alert_type: "You have indicated positive for Covid-19. Please adhere to recommended CDC guidelines and check with your physician.")
+alert4 = Alert.create(alert_type: "Vaccinated.")
+alert5 = Alert.create(alert_type: "Please indicate your status.")
 
 
