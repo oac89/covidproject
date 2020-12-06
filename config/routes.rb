@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :alerts, only: [:show, :index]
+  resources :alerts, only: [:show, :index, :new, :create]
   resources :weekdays, only: [:show, :index]
   resources :locations, only: [:show, :index]
   resources :users, only: [:show, :new, :create]
