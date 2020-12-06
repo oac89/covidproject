@@ -1,1 +1,11 @@
-Hello. This is new 
+Hello. This is a list of unique identification numbers!
+<br>
+
+Please select your corresponding number (assigned during account creation).
+
+<ul>
+<% @users.each do |user| %>
+    <li><%= link_to user.id, user_path(user) %></li><br>
+<% end%>
+</ul>
+

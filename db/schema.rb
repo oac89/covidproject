@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_05_052755) do
+ActiveRecord::Schema.define(version: 2020_12_04_160357) do
 
   create_table "alerts", force: :cascade do |t|
     t.string "alert_type"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -31,7 +32,6 @@ ActiveRecord::Schema.define(version: 2020_12_05_052755) do
     t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "alert_id"
   end
 
   create_table "weekdays", force: :cascade do |t|
