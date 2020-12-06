@@ -7,8 +7,7 @@
     <%= f.text_field :age%>
     <br>
     <%= f.collection_select :location_ids, Location.all, :id, :name %>
-    <%= f.collection_select :status, User.all, :id, :status %>
-    #(status for drop down option)
+    <%= f.collection_select :users_ids, User.all, :id, :status %>
     <br>
     <%= f.submit%>
     <% end %>
