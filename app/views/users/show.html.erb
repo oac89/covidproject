@@ -1,1 +1,20 @@
-<h1> MENTAL DURESS!!<!h1>
+Hello <%= @user.name %>!
+<br>
+
+Your current status is <%= @user.status %>.
+<br>
+
+<% if @user.status == "healthy"%>
+    <h3> "Negative for Covid-19 at this time. Please keep practicing social distancing and covering your face including the nose!" </h3>
+<% elsif @user.status == "unknown"%>
+    <h3> "You're status is unknown. Please practice social distancing and get tested." </h3>  
+<% elsif @user.status == "infected"%>
+    <h3> "You have indicated positive for Covid-19. Please adhere to recommended CDC guidelines and check with your physician." </h3>  
+<% end %>
+
+
+Would you like to <%= link_to "update", new_user_path %> your status?
+
+
+
+

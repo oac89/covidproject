@@ -11,30 +11,33 @@ Location.destroy_all
 Weekday.destroy_all 
 Alert.destroy_all 
 
+
     15.times do 
         User.create([{
-            name:Faker::FunnyName.unique.name, 
-            age: rand(0..100), 
-            status: "healthy"
-            }])
-    end  
-
-    2.times do 
-        User.create([{
-            name:Faker::FunnyName.unique.name, 
-            age: rand(0..100), 
-            status: "unknown"
-            }])
-    end 
+                name:Faker::FunnyName.unique.name, 
+                age: rand(0..100), 
+                status: "healthy"
+                }])
+        end  
+    
+        2.times do 
+            User.create([{
+                    name:Faker::FunnyName.unique.name, 
+                    age: rand(0..100), 
+                    status: "unknown"
+                    }])
+        end 
 
     3.times do 
         User.create([{
-            name:Faker::FunnyName.unique.name, 
-            age: rand(0..100), 
-            status: "infected"
-            }])
+                name:Faker::FunnyName.unique.name, 
+                age: rand(0..100), 
+                status: "infected"
+                }])
     end 
-
+    
+    
+    
 grocery_store = Location.create(name: "Tony's", address: "4894 W. Milwaukee Ave")
 bank = Location.create(name: "Bank of America", address: "7894 W. Damen Ave")
 coffee = Location.create(name: "Ipsento", address: "4613 N. California")
@@ -51,10 +54,11 @@ mall = Location.create(name: "Brickyard Mall", address: "2530 N. Narragansett")
 # sun = Weekday.create(user_id: user.id, location_id: location.id, day: "Sunday")
 
 
-alert1 = Alert.create(alert_type: "Possible exposure at a location you visited, quarantine and test ASAP!")
-alert2 = Alert.create(alert_type: "Negative for Covid-19 at this time. Please keep practicing social distancing and covering your face including the nose!")
-alert3 = Alert.create(alert_type: "You have indicated positive for Covid-19. Please adhere to recommended CDC guidelines and check with your physician.")
-alert4 = Alert.create(alert_type: "Vaccinated.")
-alert5 = Alert.create(alert_type: "Please indicate your status.")
+
+alert1 = Alert.create(alert_type: "Possible exposure at a location you visited, quarantine and test ASAP!", user_id: User.first.id)
+alert2 = Alert.create(alert_type: "Negative for Covid-19 at this time. Please keep practicing social distancing and covering your face including the nose!", user_id: User.second.id)
+alert3 = Alert.create(alert_type: "You have indicated positive for Covid-19. Please adhere to recommended CDC guidelines and check with your physician.", user_id: User.first.id)
+alert4 = Alert.create(alert_type: "Vaccinated.", user_id: User.second.id)
+alert5 = Alert.create(alert_type: "Please indicate your status.", user_id: User.first.id)
 
 
