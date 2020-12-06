@@ -35,6 +35,13 @@ class AlertsController < ApplicationController
         end
     end 
 
+    def destroy
+        @alert = Alert.find(params[:id])  
+        @alert.destroy 
+        redirect_to user_path(@user)
+    end
+    
+
     private 
 
     def alert_params
