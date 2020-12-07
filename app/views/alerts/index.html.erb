@@ -1,1 +1,7 @@
-Hello. We have blue-light filtered glasses 
+These are the possible alerts you may receive based on your health status:
+
+<ul> 
+    <% @alerts.each do |alert|%>
+        <li><%= alert.alert_type %></li><br>
+    <% end%>
+</ul>

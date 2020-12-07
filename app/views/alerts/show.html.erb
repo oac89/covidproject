@@ -1,1 +1,28 @@
-This is a test, Ronalyssa 
+
+
+
+
+<%= @alert.user.name %>
+  
+<% @alert.user.locations.each do |location| %>
+    <%= location.name %>
+     <%= location.id %>
+<% end%>
+ 
+  
+
+  <% @alert.user.weekdays.each do |weekday| %>
+    <%= weekday.day %>
+<% end%>
+
+if @weekday.day == weekday.day 
+ send alert to 
+
+ day.user_id
+
+ create alert for these user ids
+ create form 
+
+ Alert.create(alert_type: "Possible exposure at a location you visited, quarantine and test ASAP!", user_id: User.first.id)
+
+ update form updates those users' statuses
