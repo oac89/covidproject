@@ -4,6 +4,14 @@ Hello <%= @user.name %>!
 Your current status is <%= @user.status %>.
 <br>
 
+You went to <% @user.locations.each do |location| %>
+    <%= location.name %>
+<% end%>.
+
+<% @user.weekdays.each do |weekday| %>
+    <%= weekday.location_id %>
+<% end%>
+
 <% if @user.status == "healthy"%>
     <h3> "Negative for Covid-19 at this time. Please keep practicing social distancing and covering your face including the nose!" </h3>
 <% elsif @user.status == "unknown"%>

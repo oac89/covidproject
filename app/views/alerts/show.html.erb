@@ -3,17 +3,27 @@
 
 
 <%= @alert.user.name %>
+  <br>
+  <br>
   
 <% @alert.user.locations.each do |location| %>
     <%= location.name %>
      <%= location.id %>
 <% end%>
+  <br>
+  <br>
  
   
 
   <% @alert.user.weekdays.each do |weekday| %>
     <%= weekday.day %>
 <% end%>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
 
 if @weekday.day == weekday.day 
  send alert to 
