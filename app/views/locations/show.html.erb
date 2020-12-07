@@ -1,1 +1,7 @@
-I will listen to my master, says Oscar's fingers 
+These are the users who have been to this location:
+
+<ul>
+<% @location.users.each do |user|%>
+    <li><%= user.name %></li><br>
+<% end %>
+</ul>

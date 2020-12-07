@@ -1,1 +1,6 @@
-Hello, Kyle 
+<h3> These are all the locations our users have been to: </h3>
+<ul>
+<% @locations.each do |location| %>
+    <li><%= link_to location.name, location_path(location) %></li><br>
+<% end %>
+</ul>

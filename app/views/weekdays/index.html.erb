@@ -1,1 +1,5 @@
-Ronalyssa finna fight over 3 wick candles. Get that eucalyptus-mint, guuuuuuuuuurl! 
+These are the users and where they have been
+
+<% @weekdays.each do |weekday|%>
+    <li><%= link_to weekday.day, weekday_path(weekday) %></li>
+<% end %>
