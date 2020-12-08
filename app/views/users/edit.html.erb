@@ -6,9 +6,7 @@
     <%= f.label :age %>
     <%= f.text_field :age%>
     <br>
-    <%= f.collection_select :location_ids, Location.all, :id, :name %>
-    <%= f.collection_select :status, User.all, :id, :status %>
-    <%= f.collection_select :weekday_ids, Weekday.all, :id, :day %>
+    <%= f.collection_select :status, @statuses, :to_s, :to_s %>
     <br>
     <%= f.submit%>
     <% end %>

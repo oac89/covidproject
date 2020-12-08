@@ -10,15 +10,20 @@ class UsersController < ApplicationController
 
     def new 
         @user = User.new 
+        @statuses = ["Healthy", "Vaccinated", "Infected", "Unknown"]
     end 
 
     def create
         @user = User.new(user_params) 
         if @user.save
+            if @user.status == "infected"
+                send_alerts
+            end
             redirect_to user_path(@user)
         else 
             render :new 
         end 
+
     end 
 
     def edit
@@ -29,11 +34,16 @@ class UsersController < ApplicationController
     def update
         @user = User.find(params[:id])
         if @user.update(user_params)
+            if @user.status == "infected"
+                send_alerts
+            end
             redirect_to user_path(@user)
         else
             render :edit
         end
     end 
+
+  
 
     private 
 

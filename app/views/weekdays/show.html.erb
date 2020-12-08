@@ -2,8 +2,11 @@ These are the people who have been to a specific location:
 <br>
 <br>
 <li><%= @weekday.location.name %></li><br>
-    <li><%= @weekday.user.name %></li>
+    <li>User_id <%= link_to @weekday.user_id, user_path%></li>
 
+    <%= link_to "send alert", new_weekday_path %> to users
+<br>
+<br>
     if a user.status == "infected" 
     send alert 3 to user's who share same date and location
 

@@ -1,0 +1,8 @@
+<h1> New Weekday Form </h1>
+ <%= form_for(@weekday) do |f| %>
+    <%= f.collection_select :day, Weekday.all, :to_s, :day %>
+    <%= f.collection_select :location_id, Location.all, :id, :name %>
+    <br>
+    <%= f.submit%>
+    <% end %>
+    
